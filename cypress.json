@@ -1,0 +1,14 @@
+{
+  "defaultCommandTimeout": 8000,
+   "reporter":"mochawesome",
+  "env": {
+    "url": "https://<Test_URL>"
+  },
+  
+  
+  
+  "projectId": "w54n4e",
+  "retries":{
+    "runMode":1
+  }
+}

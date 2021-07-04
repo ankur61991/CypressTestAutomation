@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-07-04T13:39:29.109Z",
+    "end": "2021-07-04T13:39:33.783Z",
+    "duration": 4674,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8d4229e1-65a3-48e2-9deb-3e07535eb577",
+      "title": "",
+      "fullFile": "cypress/integration/2-advanced-examples/FakeTest.js",
+      "file": "cypress/integration/2-advanced-examples/FakeTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "28fd9a77-b30b-4a51-a6e7-6abd308e8a57",
+          "title": "My Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "My First TestCase",
+              "fullTitle": "My Test Suite My First TestCase",
+              "timedOut": null,
+              "duration": 2124,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://example.cypress.io/commands/network-requests');\ncy.server();\ncy.route({\n  method: 'PUT',\n  url: '/comments/*',\n  status: 404,\n  response: {\n    error: \"Hey comment do not exist\"\n  },\n  delay: 1000\n}).as('UpdateComment');\ncy.get('.network-put').click();\ncy.get('.network-put-comment').should('contain', 'Hey comment do not exist');",
+              "err": {},
+              "uuid": "61ddb54e-e9f1-4679-ae1c-9e3d15839f62",
+              "parentUUID": "28fd9a77-b30b-4a51-a6e7-6abd308e8a57",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "61ddb54e-e9f1-4679-ae1c-9e3d15839f62"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2124,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.2.0"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules\\.bin\\cypress run",
+    "runsmoke": "npm run test -- --spec cypress\\integration\\2-advanced-examples\\Test1.js --headed",
+    "chromeTest": "npm run test -- --browser chrome",
+    "recordDashboardTest": "npm run test -- --spec cypress\\integration\\2-advanced-examples\\Test1.js --record --reporter mochawesome --key b5aa1279-58d6-4cab-aca0-ba28de4ce602",
+    "ecommerceDeliveryFeature": "npm run test -- --spec cypress\\integration\\2-advanced-examples\\BDD\\ecommerce.feature --record --reporter mochawesome --key b5aa1279-58d6-4cab-aca0-ba28de4ce602"
+  },
+  "author": "AnkurVerma",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^7.6.0",
+    "cypress-cucumber-preprocessor": "^4.1.2",
+    "mocha": "^9.0.1",
+    "mochawesome": "^6.2.2",
+    "multiple-cucumber-html-reporter": "^1.18.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}
