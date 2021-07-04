@@ -5,7 +5,7 @@
     "url": "https://<Test_URL>"
   },
   
-  
+  "testFiles": "**/*.feature",
   
   "projectId": "w54n4e",
   "retries":{
